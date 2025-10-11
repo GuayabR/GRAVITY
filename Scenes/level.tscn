@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://chkvc5pio0s87"]
+
+[ext_resource type="Texture2D" uid="uid://8f5131x0gidc" path="res://icon.svg" id="1_oi3di"]
+[ext_resource type="PackedScene" uid="uid://ql1fackiubha" path="res://Scenes/plat.tscn" id="1_vonw3"]
+[ext_resource type="PackedScene" uid="uid://dthqdf77xggvc" path="res://Scenes/player.tscn" id="2_oi3di"]
+
+[node name="level" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.14117648)
+texture_repeat = 2
+scale = Vector2(3.2467625, 3.2467625)
+texture = ExtResource("1_oi3di")
+region_enabled = true
+region_rect = Rect2(0, 0, 15256.152, 8900.0205)
+
+[node name="player" parent="." instance=ExtResource("2_oi3di")]
+position = Vector2(0, -62)
+
+[node name="plat" parent="." instance=ExtResource("1_vonw3")]
+position = Vector2(0, 30)
+scale = Vector2(16.83728, 1.1259497)
+
+[node name="plat2" parent="." instance=ExtResource("1_vonw3")]
+position = Vector2(2231, -493)
+scale = Vector2(16.83728, 1.1259497)
